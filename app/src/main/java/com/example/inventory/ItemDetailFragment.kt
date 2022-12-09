@@ -52,6 +52,7 @@ class ItemDetailFragment : Fragment() {
             binding.itemName.text = item.itemName
             binding.itemPrice.text = item.getFormattedPrice()
             binding.itemCount.text = item.quantityInStock.toString()
+            sellItem.setOnClickListener { viewModel.sellItem(item) }
         }
     }
 
